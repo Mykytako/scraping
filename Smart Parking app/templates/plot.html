@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Lot {{ pid }}</title>
+</head>
+<body>
+    <h1>Parking Lot {{ pid }} Status</h1>
+    <p>Occupancy Rate: {{ occrate }}%</p>
+    <p>Price: ${{ price }}</p>
+    <h2>Recent Data</h2>
+    <ul>
+        {% for data in lot %}
+            <li>Occupancy Rate: {{ data.occrate }}%, Price: ${{ data.price }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
